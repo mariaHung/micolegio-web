@@ -1,11 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
+import svgToDataUri from "mini-svg-data-uri";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+      },
       colors: {
         color: {
           1: "#FF8A08", // light orange
@@ -19,7 +36,7 @@ export default {
           1: "#454545", // negro gris 26242C
         },
         n: {
-          1: "#F5F7F8", // light gray
+          1: "#F5F7F8", // white
           2: "#FFd9c9",  
           3: "#ffbe7d", 
           4: "#FAAe61",
@@ -50,16 +67,6 @@ export default {
       opacity: {
         15: ".15",
       },
-      spotlight: {
-        "0%": {
-          opacity: "0",
-          transform: "translate(-72%, -62%) scale(0.5)",
-        },
-        "100%": {
-          opacity: "1",
-          transform: "translate(-50%,-40%) scale(1)",
-        },
-      },
       transitionDuration: {
         DEFAULT: "200ms",
       },
@@ -84,8 +91,19 @@ export default {
     },
   },
   plugins: [
-    plugin(function ({ addBase, addComponents, addUtilities }) {
+    addVariablesForColors,
+    plugin(function ({ addBase, addComponents, addUtilities, matchUtilities, theme }) {
       addBase({});
+      matchUtilities(
+        {
+          "bg-dot-thick": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
       addComponents({
         ".container": {
           "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
@@ -140,3 +158,15 @@ export default {
     }),
   ],
 };
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}

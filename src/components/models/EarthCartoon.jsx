@@ -308,9 +308,9 @@ const EarthCartoon = ({ isRotating, setIsRotating, setCurrentStage, ...props}) =
           receiveShadow
           geometry={nodes.avion002.geometry}
           material={materials['Atlas.2']}
-          position={[0.01, 0.636, 1.074]}
-          rotation={[1.036, 0, 0]}
-          scale={0.018}>
+          position={[0.15, 0.936, 1.154]}
+          rotation={[1.046, 0.10, -0.20]}
+          scale={0.019}>
           <mesh
             name="Cube001"
             castShadow
@@ -348,9 +348,9 @@ const EarthCartoon = ({ isRotating, setIsRotating, setCurrentStage, ...props}) =
           receiveShadow
           geometry={nodes.nube002.geometry}
           material={materials.nube}
-          position={[-0.003, 0, 1.572]}
-          rotation={[2.489, -1.503, -0.655]}
-          scale={[-0.023, -0.017, -0.023]}
+          position={[0.13, 0, 1.299]}
+          rotation={[2.399, -1.603, -0.666]}
+          scale={[-0.015, -0.015, -0.020]}
         />
         <mesh
           name="Icosphere006"
@@ -358,8 +358,8 @@ const EarthCartoon = ({ isRotating, setIsRotating, setCurrentStage, ...props}) =
           receiveShadow
           geometry={nodes.Icosphere006.geometry}
           material={materials.nube}
-          position={[1.421, 0.599, -0.52]}
-          rotation={[-3.11, -0.434, -3.05]}
+          position={[1.121, 0.599, -0.152]}
+          rotation={[-3.11, -0.434, 3.15]}
           scale={[0.063, 0.055, 0.052]}
         />
         <mesh
@@ -398,7 +398,7 @@ const EarthCartoon = ({ isRotating, setIsRotating, setCurrentStage, ...props}) =
           receiveShadow
           geometry={nodes.Icosphere009.geometry}
           material={materials.nube}
-          position={[0.952, 0.357, 1.09]}
+          position={[0.652, 0.357, 1.09]}
           rotation={[2.426, 0.715, -2.624]}
           scale={[0.045, 0.035, 0.045]}
         />

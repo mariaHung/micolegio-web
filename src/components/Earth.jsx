@@ -14,9 +14,9 @@ const Earth = () => {
         let rotation = [100, 0, 0];
 
         if(window.innerWidth < 768) {
-        screenScale = [25, 25, 25];
-        } else {
         screenScale = [26, 26, 26];
+        } else {
+        screenScale = [28, 27, 28];
         }
         return [screenScale, screenPosition, rotation];
     } 
@@ -24,15 +24,15 @@ const Earth = () => {
     const [earthScale, earthPosition, earthRotation] = adjustEarthForScreenSize();
 
     return (
-        <div className='mt-[-20rem] lg:mt-[-27rem] w-full h-screen relative'>
+        <div className='mt-[-25rem] lg:mt-[-27rem] w-full h-screen relative'>
             <Canvas
                 className={`bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                 camera={{ near: 0.1, far: 1000}}
             >
                 <Suspense fallback={<Loader />}>
-                <directionalLight position={[0, 0, 0]} intensity={0} />
-                <ambientLight intensity={0} />
-                <hemisphereLight skyColor='#b1baff' groundColor="000000" intensity={1} />
+                <directionalLight position={[0, 25, 0]} intensity={5} />
+                <ambientLight intensity={1} />
+                <hemisphereLight skyColor='#FFEA00' groundColor="#000000" intensity={2} />
 
                 <EarthCartoon
                     position={earthPosition}
