@@ -3,15 +3,16 @@ import Earth from './Earth'
 import { PlaceholdersAndVanishInput } from './design/Input'
 import { Spotlight } from './design/Spotlight'
 import { TextGenerateEffect } from './design/TextGenerateEffect'
+import Button from './Button'
 
 const Hero = () => {
   const placeholder = ["Buscar...", "Accede con tu codigo...", "..."]
   return (
-    <div className='pt-[3rem]'>   
+    <div className='pt-[3rem] lg:grid grid-cols-2'>   
       {/* <ShootingStars />
       <StarsBackground /> */}
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col lg:items-center lg:justify-center">
+        <div className="lg:text-center max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col lg:items-center lg:justify-center">
           <p className="mb-5 mx-8 uppercase tracking-widest text-xs lg:text-center text-neutral-600 max-w-80">
             Trabajamos contigo y para ti.
           </p>
@@ -20,7 +21,7 @@ const Hero = () => {
           </h1>
           <TextGenerateEffect
             words="a más de 600.000 alumnos en los últimos 10 años"
-            className="mx-8 md:text-2xl lg:text-2xl"
+            className="mx-8 md:text-2xl lg:text-lg"
           />
           {/* <div className='mx-8 md:text-1xl lg:text-2xl'>
             a más de <span className='text-n-8 transition-colors hover:text-color-1 cursor-pointer'>
@@ -29,7 +30,7 @@ const Hero = () => {
               10 años
             </span> 
           </div> */}
-          <div className='lg:mt-[5rem] w-[19rem] max-lg:w-full h-full px-6 bg-n-9 bg-opacity-40 lg:shadow-sm lg:shadow-black  rounded-[2rem] lg:w-auto even:py-10 '>
+          <div className='w-[19rem] max-lg:w-full h-full px-5 bg-n-9 bg-opacity-40 lg:shadow-sm lg:shadow-black rounded-[2rem] lg:w-auto even:py-10'>
             <div className='lg:text-center md:mt-y-5 mb-2 text-lg font-medium text-white'>
               Ingrese su Código de Acceso Web
             </div>
@@ -39,7 +40,7 @@ const Hero = () => {
               onSubmit={(e) => e}
             /> 
             <a href='#code'>
-              <p className="mt-5 mx-5 uppercase underline tracking-widest text-xs lg:text-center text-neutral-100 max-w-80">
+              <p className="mt-5 uppercase underline tracking-widest text-xs lg:text-center text-neutral-100 ">
                 Olvidaste tu codigo?
               </p>
             </a>

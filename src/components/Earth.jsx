@@ -16,7 +16,7 @@ const Earth = () => {
         if(window.innerWidth < 768) {
         screenScale = [26, 26, 26];
         } else {
-        screenScale = [28, 27, 28];
+        screenScale = [25, 25, 25];
         }
         return [screenScale, screenPosition, rotation];
     } 
@@ -24,7 +24,7 @@ const Earth = () => {
     const [earthScale, earthPosition, earthRotation] = adjustEarthForScreenSize();
 
     return (
-        <div className='mt-[-25rem] lg:mt-[-27rem] w-full h-screen relative'>
+        <div className='mt-[-25rem] lg:mt-[0rem] w-full h-screen relative'>
             <Canvas
                 className={`bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                 camera={{ near: 0.1, far: 1000}}
