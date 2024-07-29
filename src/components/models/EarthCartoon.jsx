@@ -9,7 +9,7 @@ import earthcartoon from "../../assets/3d/earth-cartoon.glb"
 import { useFrame, useThree } from '@react-three/fiber';
 import { a } from "@react-spring/three";
 
-const EarthCartoon = ({ isRotating, setIsRotating, setCurrentStage, ...props}) => {
+const EarthCartoon = ({ isRotating, setIsRotating, setCurrentStage, icons, setIcons, ...props}) => {
   const { nodes, materials } = useGLTF(earthcartoon);
 
   const earthRef = useRef();

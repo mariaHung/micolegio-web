@@ -76,7 +76,42 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
+import actua from "./micol/icons/actua.png";
+import alumno_regular from "./micol/icons/alumnos-regulares.png";
+import arbol from "./micol/icons/arbol.png"
+import arrow_down from "./micol/icons/arrow_down.png";
+import banner_setting from "./micol/icons/banner_settings.png";
+import basket_empty from "./micol/icons/basket_empty.png";
+import basket_full from "./micol/icons/basket_full.png";
+import bullet_accepted from "./micol/icons/basket_empty.png";
+import carteleras_big from "./micol/icons/carteleras_big.png";
+import card from "./micol/icons/cardMicol.png";
+import comment from "./micol/icons/comment.png";
+import comment_edit from "./micol/icons/comment_edit.png";
+import star from "./micol/icons/star_full.png";
+import pcmicol from "./micol/icons/Pcmicole.png";
+import iphone from "./micol/icons/iphone-1.png";
+import pen from "./micol/icons/edit.png";
+import rayos from "./micol/icons/rayos.png";
+
 export {
+  actua,
+  alumno_regular,
+  arbol,
+  arrow_down,
+  banner_setting,
+  basket_empty,
+  basket_full,
+  bullet_accepted,
+  carteleras_big,
+  card,
+  comment,
+  comment_edit,
+  star,
+  pcmicol,
+  iphone,
+  pen,
+  rayos,
   brainwave,
   micolog,
   check,
