@@ -16,7 +16,7 @@ const Earth = () => {
         let rotation = [100, 0, 0];
 
         if(window.innerWidth < 768) {
-        screenScale = [26, 26, 26];
+        screenScale = [24, 24, 24];
         } else {
         screenScale = [25, 25, 25];
         }
@@ -59,6 +59,7 @@ const Earth = () => {
                     md:-mt-[17rem] md:mx-[11rem] md:rotate-180
                     sm:-mt-[17em] sm:mx-[5rem] sm:rotate-180
                     xm:-mt-[17em] xm:-mx-[3rem] xm:rotate-180
+                    xxs:-mt-[17em] xxs:-mx-[3rem] xxs:rotate-180
                     opacity-85'
                 />
                 <img
@@ -67,10 +68,10 @@ const Earth = () => {
                     className='
                     lg:-mt-[21rem] lg:mx-[10rem] lg:-rotate-12
                     smd:-mt-[32rem] smd:mx-[36rem] smd:rotate-45 smd:w-[110px]
-                    md:-mt-[32rem] md:mx-[37rem] md:-rotate-12
-                    sm:-mt-[31em] sm:mx-[30rem] sm:-rotate-12
-                    xm:-mt-[30em] xm:mx-[2rem] xm:-rotate-12 xm:w-[100px]
-                    opacity-85'
+                    md:-mt-[35rem] md:mx-[37rem] md:-rotate-12
+                    sm:-mt-[35rem] sm:mx-[32rem] sm:rotate-45
+                    xm:-mt-[33rem] xm:mx-[2rem] xm:-rotate-12 xm:w-[100px]
+                    xxs:-mt-[36rem] xxs:mx-[1rem] xxs:-rotate-12'
                 />
             </div>
         </div>
