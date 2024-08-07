@@ -36,7 +36,7 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[20rem] xl:mr-8" href="#hero">
+        <a className="block w-[20rem] xl:mr-8" href="#header">
           <img src={micolog} alt="Micolegio" />
         </a>
 
@@ -64,13 +64,13 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
+        {/* <a
           href="#signup"
           className="button hidden mr-8 text-n-8 transition-colors hover:text-n-5 lg:block"
         >
-          Encuentranos
-        </a>
-        <Button className="hidden lg:flex" href="#login">
+          Unite a nuestro equipo
+        </a> */}
+        <Button className="hidden lg:flex" href="http://www.micolegio.com/administrativo-src/">
           Planel Administrativo
         </Button>
 

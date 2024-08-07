@@ -70,8 +70,8 @@ const Earth = () => {
                     smd:-mt-[32rem] smd:mx-[36rem] smd:rotate-45 smd:w-[110px]
                     md:-mt-[35rem] md:mx-[37rem] md:-rotate-12
                     sm:-mt-[35rem] sm:mx-[32rem] sm:rotate-45
-                    xm:-mt-[35rem] xm:mx-[1rem] xm:-rotate-12 xm:w-[100px]
-                    xxs:-mt-[37rem] xxs:mx-[1rem] xxs:-rotate-12'
+                    xm:-mt-[39rem] xm:mx-[22rem] xm:-rotate-12 xm:w-[100px]
+                    xxs:-mt-[39rem] xxs:-mx-[1rem] xxs:-rotate-12'
                 />
             </div>
         </div>

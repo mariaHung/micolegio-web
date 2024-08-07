@@ -38,25 +38,14 @@ import {
   
   export const navigation = [
     {
-      id: "2",
-      title: "Comunicate con nosotros",
-      url: "#how-to-use",
-    },
-    {
-      id: "3",
-      title: "Trabajemos JuntoS",
-      url: "#we-work-together",
-    },
-    {
-      id: "4",
-      title: "Buscanos",
+      id: "1",
+      title: "Unite a nuestro equipo",
       url: "#signup",
-      onlyMobile: true,
     },
     {
-      id: "5",
+      id: "2",
       title: "Panel Administrativo",
-      url: "#login",
+      url: "http://www.micolegio.com/administrativo-src/",
       onlyMobile: true,
     },
   ];
